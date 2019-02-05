@@ -1,0 +1,55 @@
+# Copyright (C) 2018  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+
+# Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+# File: /home/nebk/Documents/school/ADLD/ADLD_Robot/ADLD_Robot.csv
+# Generated on: Mon Feb  4 21:06:58 2019
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus Prime software.
+
+To,Direction,Location,I/O Bank,I/O Standard,Reserved,Current Strength,Strict Preservation
+Blue_Tooth_TX_out,Unknown,PIN_54,,3.3-V LVTTL,,,
+BlueTooth_RCV_In,Unknown,PIN_52,,3.3-V LVTTL,,,
+Bumper,Unknown,PIN_55,,3.3V Schmitt Trigger Input,,,
+Button_1,Unknown,PIN_27,,3.3V Schmitt Trigger Input,,,
+Button_2,Unknown,PIN_28,,3.3V Schmitt Trigger Input,,,
+CDS_Cell,Unknown,PIN_51,,3.3V Schmitt Trigger Input,,,
+Clk_50MHZ,Unknown,PIN_64,,3.3-V LVTTL,,,
+Digit_1,Unknown,PIN_44,,3.3-V LVTTL,,,
+Digit_2,Unknown,PIN_43,,3.3-V LVTTL,,,
+Digit_4,Unknown,PIN_35,,3.3-V LVTTL,,,
+Digit_3,Unknown,PIN_41,,3.3-V LVTTL,,,
+Dip[2],Unknown,PIN_67,,3.3-V LVTTL,,,
+Dip[1],Unknown,PIN_69,,3.3-V LVTTL,,,
+Dip[0],Unknown,PIN_71,,3.3-V LVTTL,,,
+Extra_Pin,Unknown,PIN_56,,3.3V Schmitt Trigger Input,,,
+Front_IR_Sensor,Unknown,PIN_48,,3.3-V LVCMOS,,,
+LED_Blue,Unknown,PIN_68,,3.3-V LVTTL,,,
+LED_Green,Unknown,PIN_66,,3.3-V LVTTL,,,
+LED_RED,Unknown,PIN_62,,3.3-V LVTTL,,,
+Left_IR_Sensor,Unknown,PIN_50,,3.3-V LVTTL,,,
+Left_Servo,Unknown,PIN_30,,3.3-V LVTTL,,,
+Right_IR_Sensor,Unknown,PIN_49,,3.3-V LVTTL,,,
+Right_Servo,Unknown,PIN_33,,3.3-V LVTTL,,,
+Seg_A,Unknown,PIN_37,,3.3-V LVTTL,,,
+Seg_B,Unknown,PIN_47,,3.3-V LVTTL,,,
+Seg_C,Unknown,PIN_40,,3.3-V LVTTL,,,
+Seg_Colon,Unknown,PIN_38,,3.3-V LVTTL,,,
+Seg_D,Unknown,PIN_36,,3.3-V LVTTL,,,
+Seg_E,Unknown,PIN_34,,3.3-V LVTTL,,,
+Seg_F,Unknown,PIN_39,,3.3-V LVTTL,,,
+Seg_G,Unknown,PIN_42,,3.3-V LVTTL,,,
+Spare_Servo,Unknown,PIN_29,,3.3-V LVTTL,,,
+Speaker_74,Unknown,PIN_74,,3.3-V LVTTL,,,
+Speaker_82,Unknown,PIN_82,,3.3-V LVTTL,,,
