@@ -1,0 +1,101 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+*/
+(header "graphic" (version "1.4"))
+(symbol
+	(rect 512 160 696 240)
+	(text "Duration_ROM" (rect 5 0 79 11)(font "Arial" ))
+	(text "inst" (rect 8 64 25 75)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Data_in[2..0]" (rect 0 0 62 11)(font "Arial" ))
+		(text "Data_in[2..0]" (rect 21 27 83 38)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 184 32)
+		(output)
+		(text "Dur[5..0]" (rect 0 0 42 11)(font "Arial" ))
+		(text "Dur[5..0]" (rect 128 27 170 38)(font "Arial" ))
+		(line (pt 184 32)(pt 168 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 168 64))
+	)
+)
+(symbol
+	(rect 512 248 704 328)
+	(text "Notes" (rect 5 0 34 11)(font "Arial" ))
+	(text "inst1" (rect 8 64 32 77)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Data_in[3..0]" (rect 0 0 62 11)(font "Arial" ))
+		(text "Data_in[3..0]" (rect 21 27 83 38)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 192 32)
+		(output)
+		(text "Freq[7..0]" (rect 0 0 47 11)(font "Arial" ))
+		(text "Freq[7..0]" (rect 132 27 179 38)(font "Arial" ))
+		(line (pt 192 32)(pt 176 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 176 64))
+	)
+)
+(symbol
+	(rect 136 128 352 240)
+	(text "Song_ROM" (rect 5 0 62 11)(font "Arial" ))
+	(text "inst2" (rect 8 96 32 109)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Note_Num[5..0]" (rect 0 0 77 11)(font "Arial" ))
+		(text "Note_Num[5..0]" (rect 21 27 98 38)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 216 32)
+		(output)
+		(text "Octave[1..0]" (rect 0 0 60 11)(font "Arial" ))
+		(text "Octave[1..0]" (rect 145 27 205 38)(font "Arial" ))
+		(line (pt 216 32)(pt 200 32)(line_width 3))
+	)
+	(port
+		(pt 216 48)
+		(output)
+		(text "Note[3..0]" (rect 0 0 48 11)(font "Arial" ))
+		(text "Note[3..0]" (rect 155 43 203 54)(font "Arial" ))
+		(line (pt 216 48)(pt 200 48)(line_width 3))
+	)
+	(port
+		(pt 216 64)
+		(output)
+		(text "Duration[2..0]" (rect 0 0 66 11)(font "Arial" ))
+		(text "Duration[2..0]" (rect 140 59 206 70)(font "Arial" ))
+		(line (pt 216 64)(pt 200 64)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 200 96))
+	)
+)

@@ -42,10 +42,6 @@ set_global_assignment -name TOP_LEVEL_ENTITY sellicott_Robot
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:44:42  FEBRUARY 11, 2019"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
-set_global_assignment -name VHDL_FILE decode2to4.vhd
-set_global_assignment -name VHDL_FILE Seven_Seg_Driver.vhd
-set_global_assignment -name BDF_FILE sellicott_Robot.bdf
-set_global_assignment -name VHDL_FILE clock_counter_24_bit.vhd
 set_location_assignment PIN_19 -to BLeft_IR_Sensor
 set_instance_assignment -name IO_STANDARD "3.3V SCHMITT TRIGGER INPUT" -to BLeft_IR_Sensor
 set_location_assignment PIN_54 -to Blue_Tooth_TX_Out
@@ -136,3 +132,11 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLK_50MHZ
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Dip
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_Red
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "NO HEAT SINK WITH STILL AIR"
+set_global_assignment -name VHDL_FILE Duration_ROM.vhd
+set_global_assignment -name VHDL_FILE Notes.vhd
+set_global_assignment -name VHDL_FILE Song_ROM.vhd
+set_global_assignment -name VHDL_FILE decode2to4.vhd
+set_global_assignment -name VHDL_FILE Seven_Seg_Driver.vhd
+set_global_assignment -name BDF_FILE sellicott_Robot.bdf
+set_global_assignment -name VHDL_FILE clock_counter_24_bit.vhd
+set_global_assignment -name BDF_FILE Music_Player.bdf
