@@ -765,6 +765,42 @@ refer to the applicable agreement for further details.
 	)
 	(annotation_block (parameter)(rect 416 -64 592 -32))
 )
+(symbol
+	(rect 512 216 672 312)
+	(text "Music_Player" (rect 5 0 80 15)(font "Intel Clear" (font_size 8)))
+	(text "inst3" (rect 8 79 32 92)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "play" (rect 0 0 25 15)(font "Intel Clear" (font_size 8)))
+		(text "play" (rect 21 27 46 42)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "clk[29..0]" (rect 0 0 53 15)(font "Intel Clear" (font_size 8)))
+		(text "clk[29..0]" (rect 21 43 74 58)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 160 32)
+		(output)
+		(text "speakerA" (rect 0 0 53 15)(font "Intel Clear" (font_size 8)))
+		(text "speakerA" (rect 86 27 139 42)(font "Intel Clear" (font_size 8)))
+		(line (pt 160 32)(pt 144 32))
+	)
+	(port
+		(pt 160 48)
+		(output)
+		(text "speakerB" (rect 0 0 53 15)(font "Intel Clear" (font_size 8)))
+		(text "speakerB" (rect 86 43 139 58)(font "Intel Clear" (font_size 8)))
+		(line (pt 160 48)(pt 144 48))
+	)
+	(drawing
+		(rectangle (rect 16 16 144 80))
+	)
+)
 (connector
 	(text "L" (rect 159 -16 164 -3)(font "Intel Clear" ))
 	(pt 136 0)
@@ -817,4 +853,31 @@ refer to the applicable agreement for further details.
 	(pt 592 0)
 	(pt 656 0)
 	(bus)
+)
+(connector
+	(pt 672 248)
+	(pt 728 248)
+)
+(connector
+	(pt 672 264)
+	(pt 728 264)
+)
+(connector
+	(text "clk[29..0]" (rect 472 248 518 261)(font "Intel Clear" ))
+	(pt 512 264)
+	(pt 464 264)
+	(bus)
+)
+(connector
+	(pt 512 248)
+	(pt 504 248)
+)
+(connector
+	(pt 504 248)
+	(pt 504 240)
+)
+(connector
+	(text "h" (rect 472 224 479 237)(font "Intel Clear" ))
+	(pt 504 240)
+	(pt 464 240)
 )
