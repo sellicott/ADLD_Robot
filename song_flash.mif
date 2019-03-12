@@ -1,0 +1,118 @@
+-- Copyright (C) 2018  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details.
+
+-- Quartus Prime generated Memory Initialization File (.mif)
+
+WIDTH=16;
+DEPTH=256;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=HEX;
+
+CONTENT BEGIN
+	0    :   00AA;
+	1    :   00AF;
+	2    :   00BF;
+	3    :   00C7;
+	4    :   00BA;
+	5    :   00AA;
+	6    :   00BA;
+	7    :   00BF;
+	8    :   00C7;
+	9    :   00D7;
+	10   :   00C6;
+	11   :   00B8;
+	12   :   00AA;
+	13   :   00BA;
+	14   :   00BF;
+	15   :   00C7;
+	16   :   00D7;
+	17   :   00C6;
+	18   :   00B8;
+	19   :   00AA;
+	20   :   00D6;
+	21   :   00C0;
+	22   :   00BA;
+	23   :   00AC;
+	24   :   00AA;
+	25   :   00AF;
+	26   :   00BF;
+	27   :   00C7;
+	28   :   00BA;
+	29   :   00AA;
+	30   :   00BA;
+	31   :   00BF;
+	32   :   00C7;
+	33   :   00D7;
+	34   :   00C6;
+	35   :   00B8;
+	36   :   00AA;
+	37   :   00E2;
+	38   :   00D7;
+	39   :   00E7;
+	40   :   010F;
+	41   :   00E6;
+	42   :   00D0;
+	43   :   00C2;
+	44   :   00D6;
+	45   :   00C0;
+	46   :   00BA;
+	47   :   00AC;
+	48   :   00E2;
+	49   :   00C7;
+	50   :   00D7;
+	51   :   00E7;
+	[52..53]  :   00D2;
+	54   :   00C2;
+	55   :   00AF;
+	56   :   00BF;
+	57   :   00C7;
+	[58..59]  :   00BA;
+	60   :   00AA;
+	61   :   00AF;
+	62   :   00BF;
+	63   :   00C7;
+	[64..65]  :   00D2;
+	66   :   00C2;
+	67   :   00D7;
+	68   :   00C7;
+	69   :   00D7;
+	70   :   00E4;
+	71   :   00AA;
+	72   :   00AF;
+	73   :   00BF;
+	74   :   00C7;
+	75   :   00BA;
+	76   :   00AA;
+	77   :   00BA;
+	78   :   00BF;
+	79   :   00C7;
+	80   :   00D7;
+	81   :   00C6;
+	82   :   00B8;
+	83   :   00AA;
+	84   :   00E2;
+	85   :   00D7;
+	86   :   00E7;
+	87   :   010F;
+	88   :   00E6;
+	89   :   00D0;
+	90   :   00C2;
+	91   :   00D6;
+	92   :   00C0;
+	93   :   00BA;
+	94   :   00AC;
+	[95..96]  :   0084;
+	[97..255]  :   0000;
+END;
