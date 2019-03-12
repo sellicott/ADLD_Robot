@@ -971,49 +971,6 @@ refer to the applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 512 216 672 312)
-	(text "Music_Player" (rect 5 0 80 15)(font "Intel Clear" (font_size 8)))
-	(text "inst1" (rect 8 79 32 92)(font "Intel Clear" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "play" (rect 0 0 25 15)(font "Intel Clear" (font_size 8)))
-		(text "play" (rect 21 27 46 42)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "clk[29..0]" (rect 0 0 53 15)(font "Intel Clear" (font_size 8)))
-		(text "clk[29..0]" (rect 21 43 74 58)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 160 32)
-		(output)
-		(text "speakerA" (rect 0 0 53 15)(font "Intel Clear" (font_size 8)))
-		(text "speakerA" (rect 86 27 139 42)(font "Intel Clear" (font_size 8)))
-		(line (pt 160 32)(pt 144 32))
-	)
-	(port
-		(pt 160 48)
-		(output)
-		(text "speakerB" (rect 0 0 53 15)(font "Intel Clear" (font_size 8)))
-		(text "speakerB" (rect 86 43 139 58)(font "Intel Clear" (font_size 8)))
-		(line (pt 160 48)(pt 144 48))
-	)
-	(port
-		(pt 160 64)
-		(output)
-		(text "dur[5..0]" (rect 0 0 49 15)(font "Intel Clear" (font_size 8)))
-		(text "dur[5..0]" (rect 90 59 139 74)(font "Intel Clear" (font_size 8)))
-		(line (pt 160 64)(pt 144 64)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 144 80))
-	)
-)
-(symbol
 	(rect 1256 56 1368 152)
 	(text "LPM_MUX" (rect 23 0 99 16)(font "Arial" (font_size 10)))
 	(text "inst2" (rect 3 84 27 97)(font "Intel Clear" ))
@@ -1093,6 +1050,42 @@ refer to the applicable agreement for further details.
 		(line (pt 44 88)(pt 68 72))
 	)
 	(annotation_block (parameter)(rect 1256 -32 1481 43))
+)
+(symbol
+	(rect 512 216 672 312)
+	(text "Music_Player" (rect 5 0 80 15)(font "Intel Clear" (font_size 8)))
+	(text "inst10" (rect 8 79 39 92)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "play" (rect 0 0 25 15)(font "Intel Clear" (font_size 8)))
+		(text "play" (rect 21 27 46 42)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "clk[29..0]" (rect 0 0 53 15)(font "Intel Clear" (font_size 8)))
+		(text "clk[29..0]" (rect 21 43 74 58)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 160 32)
+		(output)
+		(text "speakerA" (rect 0 0 53 15)(font "Intel Clear" (font_size 8)))
+		(text "speakerA" (rect 86 27 139 42)(font "Intel Clear" (font_size 8)))
+		(line (pt 160 32)(pt 144 32))
+	)
+	(port
+		(pt 160 48)
+		(output)
+		(text "speakerB" (rect 0 0 53 15)(font "Intel Clear" (font_size 8)))
+		(text "speakerB" (rect 86 43 139 58)(font "Intel Clear" (font_size 8)))
+		(line (pt 160 48)(pt 144 48))
+	)
+	(drawing
+		(rectangle (rect 16 16 144 80))
+	)
 )
 (connector
 	(text "L" (rect 159 -16 164 -3)(font "Intel Clear" ))
@@ -1271,20 +1264,8 @@ refer to the applicable agreement for further details.
 	(pt 1424 312)
 )
 (connector
-	(text "dur[5..0]" (rect 680 264 722 277)(font "Intel Clear" ))
-	(pt 672 280)
-	(pt 720 280)
-	(bus)
-)
-(connector
 	(pt 1312 152)
 	(pt 1312 192)
-	(bus)
-)
-(connector
-	(text "L,L,L,L,  L,L,L,L, L, L, dur[5], dur[4], dur[3], dur[2], dur[1], dur[0] " (rect 986 88 1296 101)(font "Intel Clear" ))
-	(pt 1256 104)
-	(pt 976 104)
 	(bus)
 )
 (connector
