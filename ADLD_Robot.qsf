@@ -137,6 +137,8 @@ set_global_assignment -name BDF_FILE Music_Player.bdf
 set_global_assignment -name VHDL_FILE Duration_ROM.vhd
 set_global_assignment -name VHDL_FILE Notes.vhd
 set_global_assignment -name VHDL_FILE Song_ROM.vhd
+set_global_assignment -name VHDL_FILE HBirthday_ROM.vhd
 set_global_assignment -name VHDL_FILE decode2to4.vhd
 set_global_assignment -name VHDL_FILE Seven_Seg_Driver.vhd
 set_global_assignment -name VHDL_FILE clock_counter_24_bit.vhd
+set_global_assignment -name BDF_FILE Servo_Ctl.bdf

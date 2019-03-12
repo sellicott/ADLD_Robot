@@ -12,14 +12,14 @@ Begin
 	Begin
 		Case Data_in is
 		--   ROM for Note Durations           
-			when "000" => Dur <= "000010";	-- 1/16 Note
+			when "000" => Dur <= "000011";	-- 1/16 Note
 			when "001" => Dur <= "000101";	-- 1/8 Note
 			when "010" => Dur <= "001011";	-- 1/4 Note
 			when "011" => Dur <= "010001";	-- Dotted 1/4 Note 
 			when "100" => Dur <= "010111";	-- Half Note
 			when "101" => Dur <= "100011";	-- Dotted 1/2 Note
 			when "110" => Dur <= "000111";	-- Dotted 1/8 Note
-			when "111" => Dur <= "000011";	-- Triplet 1/12 Note
+			when "111" => Dur <= "000100";	-- Triplet 1/12 Note
 		End Case;
 	End process;
 End Structure;
