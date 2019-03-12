@@ -834,42 +834,6 @@ refer to the applicable agreement for further details.
 	(annotation_block (parameter)(rect 944 280 1133 385))
 )
 (symbol
-	(rect 320 128 536 240)
-	(text "Song_ROM" (rect 5 0 62 11)(font "Arial" ))
-	(text "inst2" (rect 8 96 32 109)(font "Intel Clear" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "Note_Num[6..0]" (rect 0 0 77 11)(font "Arial" ))
-		(text "Note_Num[6..0]" (rect 21 27 98 38)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 216 32)
-		(output)
-		(text "Octave[1..0]" (rect 0 0 60 11)(font "Arial" ))
-		(text "Octave[1..0]" (rect 145 27 205 38)(font "Arial" ))
-		(line (pt 216 32)(pt 200 32)(line_width 3))
-	)
-	(port
-		(pt 216 48)
-		(output)
-		(text "Note[3..0]" (rect 0 0 48 11)(font "Arial" ))
-		(text "Note[3..0]" (rect 155 43 203 54)(font "Arial" ))
-		(line (pt 216 48)(pt 200 48)(line_width 3))
-	)
-	(port
-		(pt 216 64)
-		(output)
-		(text "Duration[2..0]" (rect 0 0 66 11)(font "Arial" ))
-		(text "Duration[2..0]" (rect 140 59 206 70)(font "Arial" ))
-		(line (pt 216 64)(pt 200 64)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 200 96))
-	)
-)
-(symbol
 	(rect 152 64 288 264)
 	(text "LPM_COUNTER" (rect 20 0 139 16)(font "Arial" (font_size 10)))
 	(text "inst17" (rect 3 189 34 202)(font "Intel Clear" ))
@@ -1022,6 +986,49 @@ refer to the applicable agreement for further details.
 	)
 	(annotation_block (parameter)(rect 152 -64 327 41))
 )
+(symbol
+	(rect 352 128 536 224)
+	(text "flash_ROM" (rect 5 0 67 15)(font "Intel Clear" (font_size 8)))
+	(text "inst15" (rect 8 79 39 92)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "addr[6..0]" (rect 0 0 55 15)(font "Intel Clear" (font_size 8)))
+		(text "addr[6..0]" (rect 21 27 76 42)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "clk" (rect 0 0 16 15)(font "Intel Clear" (font_size 8)))
+		(text "clk" (rect 21 43 37 58)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 184 32)
+		(output)
+		(text "octave[1..0]" (rect 0 0 67 15)(font "Intel Clear" (font_size 8)))
+		(text "octave[1..0]" (rect 96 27 163 42)(font "Intel Clear" (font_size 8)))
+		(line (pt 184 32)(pt 168 32)(line_width 3))
+	)
+	(port
+		(pt 184 48)
+		(output)
+		(text "note[3..0]" (rect 0 0 55 15)(font "Intel Clear" (font_size 8)))
+		(text "note[3..0]" (rect 108 43 163 58)(font "Intel Clear" (font_size 8)))
+		(line (pt 184 48)(pt 168 48)(line_width 3))
+	)
+	(port
+		(pt 184 64)
+		(output)
+		(text "duration[2..0]" (rect 0 0 77 15)(font "Intel Clear" (font_size 8)))
+		(text "duration[2..0]" (rect 86 59 163 74)(font "Intel Clear" (font_size 8)))
+		(line (pt 184 64)(pt 168 64)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 168 80))
+	)
+)
 (connector
 	(pt 1592 216)
 	(pt 1576 216)
@@ -1157,11 +1164,6 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 592 160)
 	(pt 592 120)
-	(bus)
-)
-(connector
-	(pt 320 160)
-	(pt 288 160)
 	(bus)
 )
 (connector
@@ -1310,6 +1312,16 @@ refer to the applicable agreement for further details.
 	(text "clk[20]" (rect 912 520 947 533)(font "Intel Clear" ))
 	(pt 904 536)
 	(pt 944 536)
+)
+(connector
+	(pt 288 160)
+	(pt 352 160)
+	(bus)
+)
+(connector
+	(text "next_note" (rect 304 160 354 173)(font "Intel Clear" ))
+	(pt 352 176)
+	(pt 296 176)
 )
 (junction (pt 1496 200))
 (junction (pt 1392 160))
