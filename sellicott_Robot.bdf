@@ -480,7 +480,7 @@ refer to the applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 728 240 904 256)
+	(rect 728 256 904 272)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "Speaker_74" (rect 90 0 150 13)(font "Intel Clear" ))
 	(pt 0 8)
@@ -493,11 +493,11 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 904 256 960 272))
+	(annotation_block (location)(rect 904 272 960 288))
 )
 (pin
 	(output)
-	(rect 728 256 904 272)
+	(rect 728 288 904 304)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "Speaker_82" (rect 90 0 150 13)(font "Intel Clear" ))
 	(pt 0 8)
@@ -510,7 +510,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 904 272 960 288))
+	(annotation_block (location)(rect 904 304 960 320))
 )
 (pin
 	(output)
@@ -531,7 +531,7 @@ refer to the applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 728 208 904 224)
+	(rect 728 272 904 288)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "Spare_Servo" (rect 90 0 153 13)(font "Intel Clear" ))
 	(pt 0 8)
@@ -544,7 +544,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 904 224 960 240))
+	(annotation_block (location)(rect 904 288 960 304))
 )
 (pin
 	(output)
@@ -1052,9 +1052,9 @@ refer to the applicable agreement for further details.
 	(annotation_block (parameter)(rect 1256 -32 1481 43))
 )
 (symbol
-	(rect 512 216 672 312)
+	(rect 504 216 672 344)
 	(text "Music_Player" (rect 5 0 80 15)(font "Intel Clear" (font_size 8)))
-	(text "inst10" (rect 8 79 39 92)(font "Intel Clear" ))
+	(text "inst11" (rect 8 111 39 124)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -1070,21 +1070,35 @@ refer to the applicable agreement for further details.
 		(line (pt 0 48)(pt 16 48)(line_width 3))
 	)
 	(port
-		(pt 160 32)
+		(pt 168 32)
 		(output)
-		(text "speakerA" (rect 0 0 53 15)(font "Intel Clear" (font_size 8)))
-		(text "speakerA" (rect 86 27 139 42)(font "Intel Clear" (font_size 8)))
-		(line (pt 160 32)(pt 144 32))
+		(text "note[3..0]" (rect 0 0 55 15)(font "Intel Clear" (font_size 8)))
+		(text "note[3..0]" (rect 92 27 147 42)(font "Intel Clear" (font_size 8)))
+		(line (pt 168 32)(pt 152 32)(line_width 3))
 	)
 	(port
-		(pt 160 48)
+		(pt 168 48)
+		(output)
+		(text "speakerA" (rect 0 0 53 15)(font "Intel Clear" (font_size 8)))
+		(text "speakerA" (rect 94 43 147 58)(font "Intel Clear" (font_size 8)))
+		(line (pt 168 48)(pt 152 48))
+	)
+	(port
+		(pt 168 64)
+		(output)
+		(text "data_valid" (rect 0 0 59 15)(font "Intel Clear" (font_size 8)))
+		(text "data_valid" (rect 88 59 147 74)(font "Intel Clear" (font_size 8)))
+		(line (pt 168 64)(pt 152 64))
+	)
+	(port
+		(pt 168 80)
 		(output)
 		(text "speakerB" (rect 0 0 53 15)(font "Intel Clear" (font_size 8)))
-		(text "speakerB" (rect 86 43 139 58)(font "Intel Clear" (font_size 8)))
-		(line (pt 160 48)(pt 144 48))
+		(text "speakerB" (rect 94 75 147 90)(font "Intel Clear" (font_size 8)))
+		(line (pt 168 80)(pt 152 80))
 	)
 	(drawing
-		(rectangle (rect 16 16 144 80))
+		(rectangle (rect 16 16 152 112))
 	)
 )
 (connector
@@ -1110,28 +1124,6 @@ refer to the applicable agreement for further details.
 	(pt 592 0)
 	(pt 656 0)
 	(bus)
-)
-(connector
-	(pt 672 248)
-	(pt 728 248)
-)
-(connector
-	(pt 672 264)
-	(pt 728 264)
-)
-(connector
-	(text "clk[29..0]" (rect 472 248 518 261)(font "Intel Clear" ))
-	(pt 512 264)
-	(pt 464 264)
-	(bus)
-)
-(connector
-	(pt 512 248)
-	(pt 504 248)
-)
-(connector
-	(pt 504 248)
-	(pt 504 240)
 )
 (connector
 	(pt 1104 632)
@@ -1218,11 +1210,6 @@ refer to the applicable agreement for further details.
 	(pt 664 592)
 )
 (connector
-	(text "Dip[1]" (rect 472 224 503 237)(font "Intel Clear" ))
-	(pt 504 240)
-	(pt 464 240)
-)
-(connector
 	(text "Dip[2]" (rect 304 160 335 173)(font "Intel Clear" ))
 	(pt 296 176)
 	(pt 344 176)
@@ -1279,6 +1266,50 @@ refer to the applicable agreement for further details.
 	(pt 1576 312)
 	(pt 1728 312)
 	(bus)
+)
+(connector
+	(text "L,L,L,L, L,L,L,L, L,L,L,L, note[3..0]" (rect 1093 88 1248 101)(font "Intel Clear" ))
+	(pt 1256 104)
+	(pt 1048 104)
+	(bus)
+)
+(connector
+	(text "note[3..0]" (rect 680 232 728 245)(font "Intel Clear" ))
+	(pt 672 248)
+	(pt 776 248)
+	(bus)
+)
+(connector
+	(pt 672 264)
+	(pt 728 264)
+)
+(connector
+	(pt 672 296)
+	(pt 728 296)
+)
+(connector
+	(text "clk[29..0]" (rect 448 248 494 261)(font "Intel Clear" ))
+	(pt 504 264)
+	(pt 432 264)
+	(bus)
+)
+(connector
+	(text "Dip[1]" (rect 440 224 471 237)(font "Intel Clear" ))
+	(pt 432 240)
+	(pt 496 240)
+)
+(connector
+	(pt 504 248)
+	(pt 496 248)
+)
+(connector
+	(pt 496 248)
+	(pt 496 240)
+)
+(connector
+	(text "data_valid" (rect 688 264 739 277)(font "Intel Clear" ))
+	(pt 672 280)
+	(pt 728 280)
 )
 (junction (pt 984 504))
 (junction (pt 1000 520))
