@@ -142,3 +142,4 @@ set_global_assignment -name VHDL_FILE decode2to4.vhd
 set_global_assignment -name VHDL_FILE Seven_Seg_Driver.vhd
 set_global_assignment -name VHDL_FILE clock_counter_24_bit.vhd
 set_global_assignment -name BDF_FILE Servo_Ctl.bdf
+set_global_assignment -name VHDL_FILE obstacle_FSM.vhd
