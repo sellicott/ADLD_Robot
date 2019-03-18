@@ -1122,7 +1122,7 @@ refer to the applicable agreement for further details.
 (symbol
 	(rect 504 472 712 584)
 	(text "obstacle_FSM" (rect 5 0 75 11)(font "Arial" ))
-	(text "inst11" (rect 8 96 39 109)(font "Intel Clear" ))
+	(text "inst3" (rect 8 96 32 109)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
