@@ -50,10 +50,10 @@ begin
 				when stopped =>
 					state <= straight;
 				when straight =>
-					if front_dist > min_distance then
-						state <= straight;
-					else
+					if front_dist <= min_distance then
 						state <= turn_left;
+					else
+						state <= straight;
 					end if;
 				when turn_left =>
 					if turn_count = 0 then
