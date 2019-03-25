@@ -21,9 +21,15 @@ entity obstacle_FSM is
 		clk			: in	std_logic_vector(29 downto 0);
 		front_dist	: in	unsigned(7 downto 0);
 		reset			: in	std_logic;
+		
+		-- motor outputs
 		left_motor	: out	std_logic;
+		left_en		: out std_logic;
 		right_motor	: out std_logic;
-		go_stop		: out	std_logic
+		right_en		: out	std_logic;
+		-- state output
+		state_out	: out unsigned(4 downto 0)
+		
 	);
 
 end entity;
@@ -82,17 +88,35 @@ begin
 	begin
 		case state is
 			when stopped =>
-				go_stop <= '0';
+				-- both motors stopped
+				left_en <= '0';
+				right_en <= '0';
+				-- don't care which direction
 				left_motor <= '-';
 				right_motor <= '-';
+				
+				-- state 0
+				state_out <= to_unsigned(0, state_out'length);
 			when straight =>
-				go_stop <= '1';
+				-- both motors on
+				left_en <= '1';
+				right_en <= '1';
+				-- both motors forward
 				left_motor <= '1';
 				right_motor <= '1';
+				
+				-- state 1
+				state_out <= to_unsigned(1, state_out'length);
 			when turn_left =>
-				go_stop <= '1';
+				-- both motors on
+				left_en <= '1';
+				right_en <= '1';
+				-- left motor forward, right motor reverse
 				left_motor <= '0';
 				right_motor <= '1';
+				
+				--state 2
+				state_out <= to_unsigned(2, state_out'length);
 		end case;
 	end process;
 

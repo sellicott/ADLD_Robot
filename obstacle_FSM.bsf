@@ -20,9 +20,9 @@ refer to the applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 224 128)
+	(rect 16 16 232 160)
 	(text "obstacle_FSM" (rect 5 0 62 12)(font "Arial" ))
-	(text "inst" (rect 8 96 20 108)(font "Arial" ))
+	(text "inst" (rect 8 128 20 140)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -45,25 +45,39 @@ refer to the applicable agreement for further details.
 		(line (pt 0 64)(pt 16 64)(line_width 1))
 	)
 	(port
-		(pt 208 32)
+		(pt 216 32)
 		(output)
 		(text "left_motor" (rect 0 0 41 12)(font "Arial" ))
-		(text "left_motor" (rect 146 27 187 39)(font "Arial" ))
-		(line (pt 208 32)(pt 192 32)(line_width 1))
+		(text "left_motor" (rect 154 27 195 39)(font "Arial" ))
+		(line (pt 216 32)(pt 200 32)(line_width 1))
 	)
 	(port
-		(pt 208 48)
+		(pt 216 48)
+		(output)
+		(text "left_en" (rect 0 0 27 12)(font "Arial" ))
+		(text "left_en" (rect 168 43 195 55)(font "Arial" ))
+		(line (pt 216 48)(pt 200 48)(line_width 1))
+	)
+	(port
+		(pt 216 64)
 		(output)
 		(text "right_motor" (rect 0 0 46 12)(font "Arial" ))
-		(text "right_motor" (rect 141 43 187 55)(font "Arial" ))
-		(line (pt 208 48)(pt 192 48)(line_width 1))
+		(text "right_motor" (rect 149 59 195 71)(font "Arial" ))
+		(line (pt 216 64)(pt 200 64)(line_width 1))
 	)
 	(port
-		(pt 208 64)
+		(pt 216 80)
 		(output)
-		(text "go_stop" (rect 0 0 31 12)(font "Arial" ))
-		(text "go_stop" (rect 156 59 187 71)(font "Arial" ))
-		(line (pt 208 64)(pt 192 64)(line_width 1))
+		(text "right_en" (rect 0 0 31 12)(font "Arial" ))
+		(text "right_en" (rect 164 75 195 87)(font "Arial" ))
+		(line (pt 216 80)(pt 200 80)(line_width 1))
+	)
+	(port
+		(pt 216 96)
+		(output)
+		(text "state_out[4..0]" (rect 0 0 57 12)(font "Arial" ))
+		(text "state_out[4..0]" (rect 138 91 195 103)(font "Arial" ))
+		(line (pt 216 96)(pt 200 96)(line_width 3))
 	)
 	(parameter
 		"main_clk"
@@ -86,7 +100,7 @@ refer to the applicable agreement for further details.
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
-		(rectangle (rect 16 16 192 96)(line_width 1))
+		(rectangle (rect 16 16 200 128)(line_width 1))
 	)
-	(annotation_block (parameter)(rect 224 -64 324 16))
+	(annotation_block (parameter)(rect 232 -64 332 16))
 )
