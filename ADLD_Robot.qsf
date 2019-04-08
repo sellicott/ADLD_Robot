@@ -48,7 +48,7 @@ set_location_assignment PIN_54 -to Blue_Tooth_TX_Out
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Blue_Tooth_TX_Out
 set_location_assignment PIN_52 -to BlueTooth_RCV_In
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BlueTooth_RCV_In
-set_location_assignment PIN_21 -to BRight_IR_Sensor
+set_location_assignment PIN_15 -to BRight_IR_Sensor
 set_instance_assignment -name IO_STANDARD "3.3V SCHMITT TRIGGER INPUT" -to BRight_IR_Sensor
 set_location_assignment PIN_55 -to Bumper
 set_instance_assignment -name IO_STANDARD "3.3V SCHMITT TRIGGER INPUT" -to Bumper

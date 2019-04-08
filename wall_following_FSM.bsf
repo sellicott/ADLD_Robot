@@ -20,9 +20,9 @@ refer to the applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 232 160)
+	(rect 16 16 256 192)
 	(text "wall_following_FSM" (rect 5 0 81 12)(font "Arial" ))
-	(text "inst" (rect 8 128 20 140)(font "Arial" ))
+	(text "inst" (rect 8 160 20 172)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -54,51 +54,79 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 0 96)
 		(input)
-		(text "reset" (rect 0 0 20 12)(font "Arial" ))
-		(text "reset" (rect 21 91 41 103)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96)(line_width 1))
+		(text "back_left_dist[7..0]" (rect 0 0 75 12)(font "Arial" ))
+		(text "back_left_dist[7..0]" (rect 21 91 96 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
 	)
 	(port
-		(pt 216 32)
+		(pt 0 112)
+		(input)
+		(text "back_right_dist[7..0]" (rect 0 0 80 12)(font "Arial" ))
+		(text "back_right_dist[7..0]" (rect 21 107 101 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "left_follow" (rect 0 0 38 12)(font "Arial" ))
+		(text "left_follow" (rect 21 123 59 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "reset" (rect 0 0 20 12)(font "Arial" ))
+		(text "reset" (rect 21 139 41 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 1))
+	)
+	(port
+		(pt 240 32)
 		(output)
 		(text "left_motor" (rect 0 0 41 12)(font "Arial" ))
-		(text "left_motor" (rect 154 27 195 39)(font "Arial" ))
-		(line (pt 216 32)(pt 200 32)(line_width 1))
+		(text "left_motor" (rect 178 27 219 39)(font "Arial" ))
+		(line (pt 240 32)(pt 224 32)(line_width 1))
 	)
 	(port
-		(pt 216 48)
+		(pt 240 48)
 		(output)
 		(text "left_en" (rect 0 0 27 12)(font "Arial" ))
-		(text "left_en" (rect 168 43 195 55)(font "Arial" ))
-		(line (pt 216 48)(pt 200 48)(line_width 1))
+		(text "left_en" (rect 192 43 219 55)(font "Arial" ))
+		(line (pt 240 48)(pt 224 48)(line_width 1))
 	)
 	(port
-		(pt 216 64)
+		(pt 240 64)
 		(output)
 		(text "right_motor" (rect 0 0 46 12)(font "Arial" ))
-		(text "right_motor" (rect 149 59 195 71)(font "Arial" ))
-		(line (pt 216 64)(pt 200 64)(line_width 1))
+		(text "right_motor" (rect 173 59 219 71)(font "Arial" ))
+		(line (pt 240 64)(pt 224 64)(line_width 1))
 	)
 	(port
-		(pt 216 80)
+		(pt 240 80)
 		(output)
 		(text "right_en" (rect 0 0 31 12)(font "Arial" ))
-		(text "right_en" (rect 164 75 195 87)(font "Arial" ))
-		(line (pt 216 80)(pt 200 80)(line_width 1))
+		(text "right_en" (rect 188 75 219 87)(font "Arial" ))
+		(line (pt 240 80)(pt 224 80)(line_width 1))
 	)
 	(port
-		(pt 216 96)
+		(pt 240 96)
 		(output)
 		(text "state_out[3..0]" (rect 0 0 56 12)(font "Arial" ))
-		(text "state_out[3..0]" (rect 139 91 195 103)(font "Arial" ))
-		(line (pt 216 96)(pt 200 96)(line_width 3))
+		(text "state_out[3..0]" (rect 163 91 219 103)(font "Arial" ))
+		(line (pt 240 96)(pt 224 96)(line_width 3))
 	)
 	(port
-		(pt 216 112)
+		(pt 240 112)
 		(output)
 		(text "count_out[7..0]" (rect 0 0 59 12)(font "Arial" ))
-		(text "count_out[7..0]" (rect 136 107 195 119)(font "Arial" ))
-		(line (pt 216 112)(pt 200 112)(line_width 3))
+		(text "count_out[7..0]" (rect 160 107 219 119)(font "Arial" ))
+		(line (pt 240 112)(pt 224 112)(line_width 3))
+	)
+	(port
+		(pt 240 128)
+		(output)
+		(text "led_out[2..0]" (rect 0 0 48 12)(font "Arial" ))
+		(text "led_out[2..0]" (rect 171 123 219 135)(font "Arial" ))
+		(line (pt 240 128)(pt 224 128)(line_width 3))
 	)
 	(parameter
 		"main_clk"
@@ -130,8 +158,18 @@ refer to the applicable agreement for further details.
 		"55"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"far_dist"
+		"60"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"back_far_dist"
+		"60"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
-		(rectangle (rect 16 16 200 128)(line_width 1))
+		(rectangle (rect 16 16 224 160)(line_width 1))
 	)
-	(annotation_block (parameter)(rect 232 -64 332 16))
+	(annotation_block (parameter)(rect 256 -64 356 16))
 )
