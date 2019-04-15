@@ -155,7 +155,7 @@ begin
 				
 				when past_wall =>
 					-- wait until the back sensor is a big number
-					if back_dist > back_far_dist OR inside_dist < far_dist then
+					if back_dist > back_far_dist then
 						state <= correct_in;
 					elsif front_dist < min_front_dist then
 						state <= turn_90;
