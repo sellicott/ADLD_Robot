@@ -12,7 +12,7 @@ use ieee.numeric_std.all;
 entity wall_following_FSM is
 	generic(
 		main_clk			  : integer	:= 14;
-		turn_clk			  : integer 	:= 19;
+		turn_clk			  : integer := 19;
 		turn_len			  : integer	:= 7;
 		min_front_dist	  : integer	:= 50;
 		min_side_dist	  : integer	:= 50;
@@ -22,14 +22,15 @@ entity wall_following_FSM is
 	);
 	
 	port(
-		clk			: in	std_logic_vector(29 downto 0);
-		front_dist	: in	unsigned(7 downto 0);
-		left_dist	: in	unsigned(7 downto 0);
-		right_dist	: in 	unsigned(7 downto 0);
-		back_left_dist		: in	unsigned(7 downto 0);
-		back_right_dist	: in  unsigned(7 downto 0);
-		left_follow 		: in  std_logic;
-		reset					: in	std_logic;
+		clk				: in	std_logic_vector(29 downto 0);
+		front_dist		: in	unsigned(7 downto 0);
+		inside_dist		: in	unsigned(7 downto 0);
+		back_dist		: in 	unsigned(7 downto 0);
+		left_follow 	: in  std_logic;
+		
+		f_straight		: in 	std_logic;
+		f_turn90			: in	std_logic;
+		reset				: in	std_logic;
 		
 		-- motor outputs
 		left_motor	: out	std_logic;
@@ -58,8 +59,6 @@ architecture rtl of wall_following_FSM is
 	signal outside_motor		: std_logic;
 	signal inside_en			: std_logic;
 	signal outside_en			: std_logic;
-	signal inside_dist		: unsigned(7 downto 0);
-	signal back_dist			: unsigned(7 downto 0);
 	
 
 begin
@@ -68,19 +67,11 @@ begin
 	process (left_follow)
 	begin
 		if (left_follow = '1') then
-			-- select the left 45 sensor and the left back sensor
-			inside_dist <= left_dist;
-			back_dist <= back_left_dist;
-			
 			left_motor <= inside_motor;
 			right_motor <= outside_motor;
 			left_en <= inside_en;
 			right_en <= outside_en;
 		else
-			-- select the right 45 sensor and the right back sensor
-			inside_dist <= right_dist;
-			back_dist <= back_right_dist;
-			
 			right_motor <= inside_motor;
 			left_motor <= outside_motor;
 			right_en <= inside_en;
@@ -124,6 +115,9 @@ begin
 					if inside_dist > far_dist AND back_dist < back_far_dist then
 						state <= past_wall;
 						
+					elsif front_dist < min_front_dist then
+						state <= turn_90;
+						
 					-- keep turning left until left distance
 					-- sensor is back in range
 					elsif inside_dist >  max_side_dist then
@@ -137,8 +131,11 @@ begin
 					if inside_dist > far_dist AND back_dist < back_far_dist then
 						state <= past_wall;
 						
+					elsif front_dist < min_front_dist then
+						state <= turn_90;
+						
 					-- keep turning left until left distance
-					-- sensor is back in range
+					-- sensor is back in range	
 					elsif inside_dist <= min_side_dist then
 						state <= correct_out;
 						
@@ -159,6 +156,8 @@ begin
 						state <= correct_in;
 					elsif front_dist < min_front_dist then
 						state <= turn_90;
+					elsif inside_dist < min_side_dist then
+						state <= correct_out;
 					else
 						state <= past_wall;
 					end if;

@@ -146,3 +146,4 @@ set_global_assignment -name BDF_FILE Servo_Ctl.bdf
 set_global_assignment -name VHDL_FILE obstacle_FSM.vhd
 set_global_assignment -name BDF_FILE IR_sensor.bdf
 set_global_assignment -name VHDL_FILE wall_following_FSM.vhd
+set_global_assignment -name BDF_FILE IR_sensor_group.bdf
